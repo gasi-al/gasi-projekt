@@ -1,0 +1,12 @@
+{
+  "default": [
+    "Essen",
+    "Miete",
+    "Transport",
+    "Freizeit",
+    "Gesundheit"
+  ],
+  "custom": [
+    "essen"
+  ]
+}

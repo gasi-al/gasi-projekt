@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="org.example.budget_tracker_digitales_haushaltsbuch.controller.BudgetController">
+
+    <VBox spacing="10">
+        <padding>
+            <Insets bottom="10" left="10" right="10" top="10" />
+        </padding>
+
+        <HBox spacing="10">
+            <DatePicker fx:id="datumPicker" />
+            <ComboBox fx:id="kategorieComboBox" promptText="Kategorie" />
+            <TextField fx:id="betragField" promptText="Betrag" />
+            <ChoiceBox fx:id="typChoiceBox" />
+            <TextField fx:id="kommentarField" promptText="Kommentar" />
+            <Button onAction="#handleHinzufuegen" text="Hinzufügen" />
+        </HBox>
+
+        <TextField fx:id="suchfeld" promptText="Suchen..." />
+
+        <HBox spacing="10">
+            <ChoiceBox fx:id="filterChoiceBox" />
+            <Button onAction="#handleFiltern" text="Filtern" />
+            <Button onAction="#handleLoeschen" text="Löschen" />
+            <Button onAction="#handleExportieren" text="CSV exportieren" />
+        </HBox>
+
+        <Button text="Statistik" onAction="#handleStatistikAnzeigen" />
+        <Button text="Bearbeiten" onAction="#handleBearbeiten" />
+
+
+
+        <TableView fx:id="buchungTabelle" prefHeight="300" prefWidth="970.0">
+            <columns>
+                <TableColumn fx:id="datumColumn" text="Datum" />
+                <TableColumn fx:id="kategorieColumn" text="Kategorie" />
+                <TableColumn fx:id="betragColumn" text="Betrag" />
+                <TableColumn fx:id="typColumn" text="Typ" />
+                <TableColumn fx:id="kommentarColumn" text="Kommentar" />
+            </columns>
+        </TableView>
+
+        <Label fx:id="saldoLabel" text="Saldo: 0.00 €" />
+        <Label fx:id="einnahmenLabel" text="Einnahmen: 0.00 €" />
+        <Label fx:id="ausgabenLabel" text="Ausgaben: 0.00 €" />
+
+    </VBox>
+</AnchorPane>

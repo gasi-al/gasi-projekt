@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.chart.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.budget_tracker_digitales_haushaltsbuch.controller.StatistikController"
+            prefWidth="600" prefHeight="400">
+
+    <children>
+
+        <PieChart fx:id="pieChart" layoutX="50" layoutY="40" prefWidth="500" prefHeight="300"/>
+
+        <Label layoutX="50" layoutY="10" text="Einnahmen vs. Ausgaben" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    </children>
+</AnchorPane>

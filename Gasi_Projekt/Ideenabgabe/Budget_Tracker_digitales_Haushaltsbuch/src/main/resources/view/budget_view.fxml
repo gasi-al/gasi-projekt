@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.budget_tracker_digitales_haushaltsbuch.controller.BudgetController">
+    <VBox spacing="10">
+        <padding>
+            <Insets top="10" right="10" bottom="10" left="10"/>
+        </padding>
+
+        <HBox spacing="10">
+            <DatePicker fx:id="datumPicker" />
+            <TextField fx:id="kategorieField" promptText="Kategorie" />
+            <TextField fx:id="betragField" promptText="Betrag" />
+            <ChoiceBox fx:id="typChoiceBox" />
+            <TextField fx:id="kommentarField" promptText="Kommentar" />
+            <Button text="Hinzufügen" onAction="#handleHinzufuegen"/>
+            <Button text="Löschen" onAction="#handleLoeschen"/>
+        </HBox>
+        <Button text="Löschen" onAction="#handleLoeschen"/>
+
+
+
+        <TableView fx:id="buchungTabelle" prefHeight="300">
+            <columns>
+                <TableColumn fx:id="datumColumn" text="Datum" />
+                <TableColumn fx:id="kategorieColumn" text="Kategorie" />
+                <TableColumn fx:id="betragColumn" text="Betrag" />
+                <TableColumn fx:id="typColumn" text="Typ" />
+                <TableColumn fx:id="kommentarColumn" text="Kommentar" />
+            </columns>
+        </TableView>
+
+        <Label fx:id="saldoLabel" text="Saldo: 0.00 €" />
+    </VBox>
+</AnchorPane>
